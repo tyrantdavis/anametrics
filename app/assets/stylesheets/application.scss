@@ -22,15 +22,17 @@
    flex-direction: column;
    font-weight: 300;
    line-height: 1.5;
+   padding: 0px 2px;
 
  }
 
  body {
    font-family: 'Lato', sans-serif;
+   font-size: 16px;
    background-image: url("");
    background-position: center top;
    background-size: cover;
    margin: 0;
    z-index: 20;
-   background-color: #3498db;
+  //  background-color: #3498db;
  }
