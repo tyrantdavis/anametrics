@@ -1,2 +1,14 @@
-<h1>RegisteredApplications#show</h1>
-<p>Find me in app/views/registered_applications/show.html.erb</p>
+<div class="container">
+  <%= link_to "My Applications", registered_applications_path %>
+  <div>
+    <h1>
+      <%= @registered_application.name %>
+    </h1>
+    <span class="app_link"><%= link_to @registered_application.url, @registered_application.url, target: '_blank' %></span>
+
+      <% if @registered_application.user == current_user %>
+        <%= link_to "Edit", edit_registered_application_path, class: 'btn btn-success' %>
+        <%= link_to "Delete", registered_application_path(@registered_application), method: :delete, remote: true, class: 'btn btn-danger' %>
+      <% end %>
+  </div>
+</div>

@@ -1,2 +1,6 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div align="center">
+  <h1 class="text-center">My Apps</h1>
+    <% @registered_applications.each do | registered_application | %>
+      <%= render partial: 'registered_applications/registered_application', object: @registered_application %>
+    <% end %>
+</div>

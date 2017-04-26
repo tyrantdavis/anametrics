@@ -1,2 +1,20 @@
-<h1>RegisteredApplications#edit</h1>
-<p>Find me in app/views/registered_applications/edit.html.erb</p>
+<div class="page-header">
+  <h1>Edit <%= @registered_application.name %></h1>
+</div>
+<br />
+<div class="row">
+  <div class="col-xs-4">
+    <%= form_for @registered_application do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+  <div class="col-xs-8">
+    <div class="form-group">
+      <%= f.label :url, "URL" %>
+      <%= f.text_field :url %>
+    </div>
+  <%= f.submit "Save", class: 'btn btn-success' %>
+  <% end %>
+  </div>
+</div>

@@ -10,28 +10,29 @@
   </head>
 
   <body>
-<ul class="sign-up-in link-to-text-color">
-<% if user_signed_in? %>
-  <li id="signed-in-as">
-    Signed in as: <strong ><%= current_user.email %></strong>
-  </li>
-  <li class="floatRt">
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link link-to-text-color' %>
-|
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link link-to-text-color'  %>
-</li>
-<% else %>
-</ul>
-<ul class="sign-up-in">
-  <li class="floatRt">
-  <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link link-to-text-color'  %>
-|
-    <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link link-to-text-color'  %>
-  </li>
-</ul>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-    <%= yield %>
-<% end %>
+    <div class="container">
+      <% if user_signed_in? %>
+        <ul class="sign-up-in link-to-text-color">
+          <li id="signed-in-as" class="floatRt">
+            Signed in as: <strong ><%= current_user.email %></strong>
+          </li>
+          <li class="floatRt">
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link link-to-text-color' %>
+        |
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link link-to-text-color'  %>
+        </li>
+        </ul>
+      <% else %>
+        <ul class="sign-up-in">
+          <li class="floatRt">
+          <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link link-to-text-color'  %>
+          <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link link-to-text-color'  %>
+          </li>
+        </ul>
+      <% end %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
