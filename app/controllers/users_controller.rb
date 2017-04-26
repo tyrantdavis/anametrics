@@ -1,22 +1,7 @@
 class UsersController < ApplicationController
-  def index
-  end
-
-  def new
-  end
-
-  def create
-  end
+  before_action :require_sign_in
 
   def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+    @registered_applications = current_user.registered_applications
   end
 end
