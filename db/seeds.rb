@@ -2,7 +2,6 @@ require 'faker'
 
 # Create Member
 member = User.create(
-  name: 'Member',
   email: "member@example.com",
   password: 'password'
 )
@@ -12,8 +11,7 @@ member.save!
 #Create users
 5.times do
   user = User.create(
-    name: Faker::Name.name,
-    email:  Faker::Internet.email
+    email:  Faker::Internet.email,
     password: "password"
     )
     user.skip_confirmation!

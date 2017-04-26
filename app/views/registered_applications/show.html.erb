@@ -11,4 +11,11 @@
         <%= link_to "Delete", registered_application_path(@registered_application), method: :delete, remote: true, class: 'btn btn-danger' %>
       <% end %>
   </div>
+  <hr />
+  <h2>Events</h2>
+  <% @events.each do | name, events | %>
+    <div>
+      <h3> <%= name %> : <span> <%= events.count %> </span> </h3>
+    </div>
+  <% end %>
 </div>
