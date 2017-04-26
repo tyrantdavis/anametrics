@@ -23,6 +23,8 @@ class RegisteredApplicationsController < ApplicationController
   end
 
   def show
+    # sorts events by name
+    @events = @registered_application.events.group_by(&:name)
   end
 
   def edit
