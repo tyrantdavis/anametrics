@@ -1,10 +1,10 @@
-<%= content_tag_for :div, registered_application, class: "row" do %>
+<div class="row">
   <div>
     <h3>
       <%= link_to "#{registered_application.name}", registered_application, class:'button-space' %>
-      <% if @registered_application.user == current_user %>
+      <% if current_user %>
         <%= link_to "Delete", registered_application, method: :delete, remote: true, class: 'btn btn-danger'%>
       <% end %>
     </h3>
   </div>
-<% end %>
+</div>

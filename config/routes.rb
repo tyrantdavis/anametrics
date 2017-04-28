@@ -5,6 +5,7 @@ resources :registered_applications
 resources :user, only: [:show]
 
 namespace :api, defaults: { format: :json } do
+  match '/events', to: 'events#preflight', via: [:options]
   resources :events, only: [:create]
 end
 
