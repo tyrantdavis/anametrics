@@ -1,6 +1,6 @@
-# Blocmetrics
+# Anametrics
 ___
-Blocmetrics is an analytics service that integrates with web applications to track events on websites.
+Anametrics is an analytics service that integrates with web applications to track events on websites.
 
 ## Development Objectives
 * Create a client-side JavaScript snippet that allows a user to track events on their website
@@ -82,4 +82,3 @@ $ rails server
   $ heroku run rake db:migrate
   ```
   
-  _Made with my mentor at [Bloc](http://bloc.io)_
